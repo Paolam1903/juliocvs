@@ -704,31 +704,40 @@ def construir_tabla_productos(df_vendedor, maestro, df_cvs, rol):
         # =========================
         ejecutado = ejec.get(producto, 0)
 
+
+
         # =========================
         # REGLA ESPECIAL OTROS
         # =========================
+        mostrar_porcentaje = True
+
         if producto == "OTROS":
 
             porta_prepago = ejec.get("PORTABILIDADES PREPAGO", 0)
 
-            # Si no cumple las 4 portabilidades prepago,
-            # no aplica el pago del KPI OTROS
+            # Si no cumple las 4 portabilidades prepago
             if porta_prepago < 4:
-                ejecutado = 0
+                mostrar_porcentaje = False
 
         # =========================
         # % CUMPLIMIENTO
         # =========================
-        if meta_ajustada > 0:
-            pct = int(round((ejecutado / meta_ajustada) * 100))
+        if mostrar_porcentaje:
+            if meta_ajustada > 0:
+                pct = int(round((ejecutado / meta_ajustada) * 100))
+            else:
+                pct = 0
+
+            pct_texto = f"{pct}%"
+
         else:
-            pct = 0
+            pct_texto = "Pendiente 4 porta pre"
 
         filas.append({
             "Producto": producto,
             "Meta_Producto": meta_ajustada,
             "Ejecutado": int(ejecutado),
-            "% Cumplimiento": f"{pct}%"
+            "% Cumplimiento": pct_texto
         })
 
     # =========================
