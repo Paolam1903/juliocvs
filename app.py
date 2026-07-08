@@ -565,7 +565,7 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
             return 0.50
 
     if cvs == "EL BAGRE":
-        return 1 / 3
+        return 1 / 2
 
     # ==================================================
     # 🔴 REGLAS NORMALES
