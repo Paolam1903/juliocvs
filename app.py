@@ -566,6 +566,21 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
 
     if cvs == "EL BAGRE":
         return 1 / 2
+    
+
+    # ==================================================
+    # YARUMAL
+    # ==================================================
+
+    if cvs == "YARUMAL":
+
+        # Líder Geraldin Angulo
+        if rol == "LIDER":
+            return 1152 / 1800
+
+        # Asesora Laura Carolina
+        elif "LAURA" in nombre:
+            return 648 / 1800
 
     # ==================================================
     # 🔴 REGLAS NORMALES
