@@ -581,6 +581,20 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         # Asesora Laura Carolina
         elif "LAURA" in nombre:
             return 648 / 1800
+        
+    # ==================================================
+    # DON MATIAS
+    # ==================================================
+
+    if cvs == "DON MATIAS":
+
+        # Líder Diana Ruiz
+        if rol == "LIDER":
+            return 1140 / 1500
+
+        # Asesora Evelyn
+        elif "EVELYN" in nombre:
+            return 360 / 1500
 
     # ==================================================
     # 🔴 REGLAS NORMALES
