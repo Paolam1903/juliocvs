@@ -34,7 +34,7 @@ if not RUTA_LIQ.exists() or not RUTA_METAS.exists():
 # =============================
 st.markdown("""
 <div style="background-color:#E30613;padding:15px;border-radius:10px">
-<h1 style="color:white;text-align:center">📊 Dashboard Comercial de julio "ventas del 1 al 5" – CVS PLUS y encuestas pendiente</h1>
+<h1 style="color:white;text-align:center">📊 Dashboard Comercial de julio "ventas del 1 al 9" – CVS PLUS al 8 y encuestas pendiente</h1>
 </div>
 """, unsafe_allow_html=True)
 
@@ -595,6 +595,62 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         # Asesora Evelyn
         elif "EVELYN" in nombre:
             return 360 / 1500
+        
+
+    # ==================================================
+    # BARBOSA
+    # ==================================================
+
+    if cvs == "BARBOSA":
+
+        # Líder Sandra Milena
+        if rol == "LIDER":
+            return 816 / 2400
+
+        # Asesora Evelis
+        elif "EVELIS" in nombre:
+            return 1224 / 2400
+
+        # Asesora Sene
+        elif "SENE" in nombre:
+            return 360 / 2400
+        
+    # ==================================================
+    # COPACABANA
+    # ==================================================
+
+    if cvs == "COPACABANA":
+
+        # Líder Vanessa
+        if rol == "LIDER":
+            return 1020 / 3000
+
+        # Asesora Bibiana
+        elif "BIBIANA" in nombre:
+            return 1530 / 3000
+
+        # Asesora Alexandra
+        elif "ALEXANDRA" in nombre:
+            return 450 / 3000
+        
+
+    # ==================================================
+    # CALDAS
+    # ==================================================
+
+    if cvs == "CALDAS":
+
+        # Líder Yolima
+        if rol == "LIDER":
+            return 1036 / 3700
+
+        # Asesora Darinela
+        elif "DARINELA" in nombre:
+            return 1554 / 3700
+
+        # Asesora Johnson
+        elif "JOHNSON" in nombre:
+            return 1110 / 3700
 
     # ==================================================
     # 🔴 REGLAS NORMALES

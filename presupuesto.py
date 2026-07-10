@@ -48,6 +48,61 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         # Asesora Evelyn
         elif "EVELYN" in nombre:
             return 360 / 1500
+        
+    # ==================================================
+    # BARBOSA
+    # ==================================================
+
+    if cvs == "BARBOSA":
+
+        # Líder Sandra Milena
+        if rol == "LIDER":
+            return 816 / 2400
+
+        # Asesora Evelys
+        elif "EVELYS" in nombre:
+            return 1224 / 2400
+
+        # Asesora Sene
+        elif "SENE" in nombre:
+            return 360 / 2400
+        
+    # ==================================================
+    # COPACABANA
+    # ==================================================
+
+    if cvs == "COPACABANA":
+
+        # Líder Vanessa
+        if rol == "LIDER":
+            return 1020 / 3000
+
+        # Asesora Bibiana
+        elif "BIBIANA" in nombre:
+            return 1530 / 3000
+
+        # Asesora Alexandra
+        elif "ALEXANDRA" in nombre:
+            return 450 / 3000
+        
+
+    # ==================================================
+    # CALDAS
+    # ==================================================
+
+    if cvs == "CALDAS":
+
+        # Líder Yolima
+        if rol == "LIDER":
+            return 1036 / 3700
+
+        # Asesora Darinela
+        elif "DARINELA" in nombre:
+            return 1554 / 3700
+
+        # Asesora Johnson
+        elif "JOHNSON" in nombre:
+            return 1110 / 3700
 
 
     # ==================================================
