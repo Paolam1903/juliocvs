@@ -59,8 +59,8 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         if rol == "LIDER":
             return 816 / 2400
 
-        # Asesora Evelys
-        elif "EVELYS" in nombre:
+        # Asesora Evelis
+        elif "EVELIS" in nombre:
             return 1224 / 2400
 
         # Asesora Sene
