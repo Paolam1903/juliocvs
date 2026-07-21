@@ -20,7 +20,38 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
     if cvs == "EL BAGRE":
         return 1 / 2
     
+    # ==================================================
+    # ITAGUI
+    # ==================================================
 
+    if cvs == "ITAGUI":
+
+        # Líder Marcela
+        if rol == "LIDER":
+            return 820 / 2500
+
+        # Asesora Diana
+        elif "DIANA" in nombre:
+            return 1230 / 2500
+
+        # Asesora Dailyn Del Valle
+        elif "DAILYN" in nombre:
+            return 450 / 2500
+        
+    # ==================================================
+    # ZARAGOZA
+    # ==================================================
+
+    if cvs == "ZARAGOZA":
+
+        # Líder Carol
+        if rol == "LIDER":
+            return 387 / 2200
+
+        # Asesora Paola
+        elif "PAOLA" in nombre:
+            return 1813 / 2200
+        
     # ==================================================
     # YARUMAL
     # ==================================================
