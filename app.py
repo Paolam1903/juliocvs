@@ -34,7 +34,7 @@ if not RUTA_LIQ.exists() or not RUTA_METAS.exists():
 # =============================
 st.markdown("""
 <div style="background-color:#E30613;padding:15px;border-radius:10px">
-<h1 style="color:white;text-align:center">📊 Dashboard Comercial de julio "ventas del 1 al 20" – CVS PLUS al 15 y encuestas al 8</h1>
+<h1 style="color:white;text-align:center">📊 Dashboard Comercial de julio "ventas del 1 al 26" – CVS PLUS al 25 y encuestas al 21</h1>
 </div>
 """, unsafe_allow_html=True)
 
