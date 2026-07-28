@@ -11,7 +11,7 @@ import math
 # =============================
 # CONFIG
 # =============================
-st.set_page_config("Dashboard Comercial - Junio CVS 2026", layout="wide")
+st.set_page_config("Dashboard Comercial - Julio CVS 2026", layout="wide")
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -683,6 +683,24 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         # Asesora Johnson
         elif "JOHNSON" in nombre:
             return 1110 / 3700
+
+    # ==================================================
+    # SABANETA
+    # ==================================================
+
+    if cvs == "SABANETA":
+
+        # Líder Sandra
+        if rol == "LIDER":
+            return 806 / 2600
+
+        # Andrea
+        elif "ANDREA" in nombre:
+            return 1209 / 2600
+
+        # María
+        elif "MARIA" in nombre:
+            return 585 / 2600
 
     # ==================================================
     # 🔴 REGLAS NORMALES
