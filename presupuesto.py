@@ -142,7 +142,7 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
 
     if cvs == "SABANETA":
 
-        # Líder Sandra
+        # LÃ­der Sandra
         if rol == "LIDER":
             return 806 / 2600
 
