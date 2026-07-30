@@ -18,7 +18,7 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
             return 0.50
 
     if cvs == "EL BAGRE":
-        return 1 / 2
+        return 1 / 3
     
     # ==================================================
     # ITAGUI
@@ -153,6 +153,24 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         # María
         elif "MARIA" in nombre:
             return 585 / 2600
+
+    # ==================================================
+    # ENVIGADO
+    # ==================================================
+
+    if cvs == "ENVIGADO":
+
+        # Líder
+        if rol == "LIDER":
+            return 938 / 3500
+
+        # Paola
+        elif "YESSICA" in nombre:
+            return 1155 / 3500
+
+        # Luz
+        elif "LUZ" in nombre:
+            return 1407 / 3500
 
     # ==================================================
     # 🔴 REGLAS NORMALES

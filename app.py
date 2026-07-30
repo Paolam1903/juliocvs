@@ -34,7 +34,7 @@ if not RUTA_LIQ.exists() or not RUTA_METAS.exists():
 # =============================
 st.markdown("""
 <div style="background-color:#E30613;padding:15px;border-radius:10px">
-<h1 style="color:white;text-align:center">📊 Dashboard Comercial de julio "ventas del 1 al 26" – CVS PLUS al 25 y encuestas al 21</h1>
+<h1 style="color:white;text-align:center">📊 Dashboard Comercial de julio "ventas del 1 al 29" – CVS PLUS al 27 y encuestas al 25</h1>
 </div>
 """, unsafe_allow_html=True)
 
@@ -542,7 +542,6 @@ with col2:
 SUPERNUMERARIOS = [
     "Johan Daniel Herrera Mazo",
     "Kelly Yuliana Ospina Saldarriaga",
-    "Jeider Alberto Moreno Solano",
     "Sara Julieth Acevedo Gutierrez"
 ]
 
@@ -566,7 +565,7 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
             return 0.50
 
     if cvs == "EL BAGRE":
-        return 1 / 2
+        return 1 / 3
     
     # ==================================================
     # ITAGUI
@@ -701,6 +700,24 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         # María
         elif "MARIA" in nombre:
             return 585 / 2600
+
+    # ==================================================
+    # ENVIGADO
+    # ==================================================
+
+    if cvs == "ENVIGADO":
+
+        # Líder
+        if rol == "LIDER":
+            return 938 / 3500
+
+        # Paola
+        elif "YESSICA" in nombre:
+            return 1155 / 3500
+
+        # Luz
+        elif "LUZ" in nombre:
+            return 1407 / 3500
 
     # ==================================================
     # 🔴 REGLAS NORMALES
