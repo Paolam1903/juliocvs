@@ -18,9 +18,40 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
             return 0.50
 
     if cvs == "EL BAGRE":
-        return 1 / 2
+        return 1 / 3
     
+    # ==================================================
+    # ITAGUI
+    # ==================================================
 
+    if cvs == "ITAGUI":
+
+        # Líder Marcela
+        if rol == "LIDER":
+            return 910 / 2500
+
+        # Asesora Diana
+        elif "DIANA" in nombre:
+            return 1005 / 2500
+
+        # Asesora Dailyn Del Valle
+        elif "DAILYN" in nombre:
+            return 585 / 2500
+        
+    # ==================================================
+    # ZARAGOZA
+    # ==================================================
+
+    if cvs == "ZARAGOZA":
+
+        # Líder Carol
+        if rol == "LIDER":
+            return 387 / 2200
+
+        # Asesora Paola
+        elif "PAOLA" in nombre:
+            return 1813 / 2200
+        
     # ==================================================
     # YARUMAL
     # ==================================================
@@ -104,6 +135,42 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         elif "JOHNSON" in nombre:
             return 1110 / 3700
 
+
+    # ==================================================
+    # SABANETA
+    # ==================================================
+
+    if cvs == "SABANETA":
+
+        # LÃ­der Sandra
+        if rol == "LIDER":
+            return 806 / 2600
+
+        # Andrea
+        elif "ANDREA" in nombre:
+            return 1209 / 2600
+
+        # María
+        elif "MARIA" in nombre:
+            return 585 / 2600
+
+    # ==================================================
+    # ENVIGADO
+    # ==================================================
+
+    if cvs == "ENVIGADO":
+
+        # Líder
+        if rol == "LIDER":
+            return 938 / 3500
+
+        # Paola
+        elif "YESSICA" in nombre:
+            return 1155 / 3500
+
+        # Luz
+        elif "LUZ" in nombre:
+            return 1407 / 3500
 
     # ==================================================
     # 🔴 REGLAS NORMALES
