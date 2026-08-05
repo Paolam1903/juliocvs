@@ -11,7 +11,7 @@ import math
 # =============================
 # CONFIG
 # =============================
-st.set_page_config("Dashboard Comercial - Julio CVS 2026", layout="wide")
+st.set_page_config("Dashboard Comercial - Junio CVS 2026", layout="wide")
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -34,7 +34,7 @@ if not RUTA_LIQ.exists() or not RUTA_METAS.exists():
 # =============================
 st.markdown("""
 <div style="background-color:#E30613;padding:15px;border-radius:10px">
-<h1 style="color:white;text-align:center">📊 Dashboard Comercial, ventas de julio – CVS PLUS  y encuestas</h1>
+<h1 style="color:white;text-align:center">📊 Dashboard Comercial de julio "ventas del 1 al 9" – CVS PLUS al 8 y encuestas pendiente</h1>
 </div>
 """, unsafe_allow_html=True)
 
@@ -565,39 +565,8 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
             return 0.50
 
     if cvs == "EL BAGRE":
-        return 1 / 3
+        return 1 / 2
     
-    # ==================================================
-    # ITAGUI
-    # ==================================================
-
-    if cvs == "ITAGUI":
-
-        # Líder Marcela
-        if rol == "LIDER":
-            return 910 / 2500
-
-        # Asesora Diana
-        elif "DIANA" in nombre:
-            return 1005 / 2500
-
-        # Asesora Dailyn Del Valle
-        elif "DAILYN" in nombre:
-            return 585 / 2500
-        
-    # ==================================================
-    # ZARAGOZA
-    # ==================================================
-
-    if cvs == "ZARAGOZA":
-
-        # Líder Carol
-        if rol == "LIDER":
-            return 387 / 2200
-
-        # Asesora Paola
-        elif "PAOLA" in nombre:
-            return 1813 / 2200
 
     # ==================================================
     # YARUMAL
@@ -682,42 +651,6 @@ def calcular_distribucion(n_asesores, cvs, nombre=None, rol=None):
         # Asesora Johnson
         elif "JOHNSON" in nombre:
             return 1110 / 3700
-
-    # ==================================================
-    # SABANETA
-    # ==================================================
-
-    if cvs == "SABANETA":
-
-        # LÃ­der Sandra
-        if rol == "LIDER":
-            return 806 / 2600
-
-        # Andrea
-        elif "ANDREA" in nombre:
-            return 1209 / 2600
-
-        # María
-        elif "MARIA" in nombre:
-            return 585 / 2600
-
-    # ==================================================
-    # ENVIGADO
-    # ==================================================
-
-    if cvs == "ENVIGADO":
-
-        # Líder
-        if rol == "LIDER":
-            return 938 / 3500
-
-        # Paola
-        elif "YESSICA" in nombre:
-            return 1155 / 3500
-
-        # Luz
-        elif "LUZ" in nombre:
-            return 1407 / 3500
 
     # ==================================================
     # 🔴 REGLAS NORMALES
